@@ -22,4 +22,10 @@ public class UserValidatorTest {
         boolean result = validator.validateEmail("abc.xyz@bl.com.");
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenMobile_whenValid_ShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateMobileNo("91 8876567896");
+        Assert.assertTrue(result);
+    }
 }
