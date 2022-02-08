@@ -40,4 +40,10 @@ public class UserValidatorTest {
         boolean result = validator.validatePassword2("Absolute");
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenPassword3_whenValid_ShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validatePassword3("Absolute");
+        Assert.assertTrue(result);
+    }
 }
