@@ -37,7 +37,7 @@ public class UserValidatorTest {
     @Test
     public void givenPassword2_whenValid_ShouldReturnTrue() {
         UserValidator validator = new UserValidator();
-        boolean result = validator.validatePassword2("Absolute");
+        boolean result = validator.validatePassword2("Absolute778");
         Assert.assertTrue(result);
     }
 }
