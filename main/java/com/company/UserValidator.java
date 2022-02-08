@@ -23,8 +23,8 @@ public class UserValidator {
         Pattern pattern = Pattern.compile(MOBILE_NO_PATTERN);
         return pattern.matcher(mobileNo).matches();
     }
-    public boolean validatePassword(String mobileNo){
-        Pattern pattern = Pattern.compile(MOBILE_NO_PATTERN);
-        return pattern.matcher(mobileNo).matches();
+    public boolean validatePassword1(String password1){
+        Pattern pattern = Pattern.compile(PASSWORD1_PATTERN);
+        return pattern.matcher(password1).matches();
     }
 }
