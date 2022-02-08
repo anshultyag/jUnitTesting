@@ -10,6 +10,11 @@ public class UserValidatorTest {
         System.out.println(result);
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenLastName_whenProper_ShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateLastName("Tyagi");
+        Assert.assertTrue(result);
+    }
 
-  
 }
