@@ -9,7 +9,8 @@ public class UserValidator {
     public static final String PASSWORD2_PATTERN = "^(?=.*[A-Z])[A-Za-z]{8,}$";
     public static final String PASSWORD3_PATTERN = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z\\\\d]{8,}$";
     public static final String PASSWORD4_PATTERN = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z\\\\d]{8,}";
-
+    public static final String EMAIL_ADDRESS_PATTERN = "^[a-zA-Z]+([._+-][0-9a-zA-Z]+)*"+
+            "@[0-9A-Za-z]+[.][a-zA-Z]{2,4}([.,][a-zA-Z])*";
 
     public boolean validateFirstName(String fname){
         Pattern pattern = Pattern.compile(FIRST_NAME_PATTERN);
@@ -42,5 +43,9 @@ public class UserValidator {
     public boolean validatePassword4(String password4){
         Pattern pattern = Pattern.compile(PASSWORD4_PATTERN);
         return pattern.matcher(password4).matches();
+    }
+    public boolean validateEmailAddress(String email){
+        Pattern pattern = Pattern.compile(EMAIL_ADDRESS_PATTERN);
+        return pattern.matcher(email).matches();
     }
 }
